@@ -800,9 +800,10 @@ header.scrolled nav{
 
     display: grid;
 
-    grid-template-columns: 62% 38%;
+    /* More space for project information */
+    grid-template-columns: 58% 42%;
 
-    gap: 30px;
+    gap: 40px;
 
     background: rgba(255, 255, 255, 0.94);
 
@@ -812,9 +813,9 @@ header.scrolled nav{
 
     border-radius: 24px;
 
-    padding: 32px;
+    padding: 50px;
 
-    min-height: 500px;
+    min-height: 600px;
 
     box-shadow:
         0 15px 40px rgba(25, 55, 95, 0.08),
@@ -837,7 +838,6 @@ header.scrolled nav{
         0 15px 35px rgba(236, 72, 153, 0.13);
 
 }
-
 /* ==========================================
    PROJECT CONTENT
 ========================================== */
