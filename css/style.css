@@ -878,6 +878,7 @@ header.scrolled nav{
 ========================================== */
 
 .project-image {
+
     position: relative;
 
     overflow: hidden;
@@ -885,10 +886,12 @@ header.scrolled nav{
     border-radius: 18px;
 }
 
-.project-image img {
-    width: 80%;
 
-    height: 650px;
+.project-image img {
+
+    width: 100%;
+
+    height: 520px;
 
     object-fit: cover;
 
@@ -896,6 +899,9 @@ header.scrolled nav{
 
     display: block;
 }
+
+
+
 
 /* ==========================================
    PROJECT TOOLS
