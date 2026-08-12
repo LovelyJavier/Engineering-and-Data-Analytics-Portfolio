@@ -793,13 +793,16 @@ header.scrolled nav{
 ========================================== */
 
 .project-card {
+
     flex: 0 0 100%;
+
     min-width: 100%;
 
     display: grid;
 
-    grid-template-columns: 55% 45%;
-    gap: 36px;
+    grid-template-columns: 65% 35%;
+
+    gap: 40px;
 
     background: rgba(255, 255, 255, 0.94);
 
@@ -822,6 +825,16 @@ header.scrolled nav{
     box-sizing: border-box;
 
     transition: .35s ease;
+}
+
+
+.project-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 60px rgba(25, 55, 95, 0.10),
+        0 15px 35px rgba(236, 72, 153, 0.13);
 }
 
 
@@ -872,9 +885,9 @@ header.scrolled nav{
 }
 
 .project-image img {
-    width: 90%;
+    width: 80%;
 
-    height: 700px;
+    height: 650px;
 
     object-fit: cover;
 
