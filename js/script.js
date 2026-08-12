@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
+
+        // Keep index inside valid range
+
         if (currentIndex < 0) {
             currentIndex = 0;
         }
@@ -70,15 +73,20 @@ document.addEventListener("DOMContentLoaded", function () {
             currentIndex = visibleCards.length - 1;
         }
 
+
         const currentCard = visibleCards[currentIndex];
 
+
         /*
-        Move the carousel using the actual position
-        of the selected visible card.
+        Move carousel based on the actual position
+        of the selected visible project card.
         */
 
         track.style.transform =
             `translateX(-${currentCard.offsetLeft}px)`;
+
+
+        // Update navigation button states
 
         previousButton.disabled =
             currentIndex === 0;
@@ -114,6 +122,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     previousButton.addEventListener("click", function () {
 
+        updateVisibleCards();
+
         if (currentIndex > 0) {
 
             currentIndex--;
@@ -136,16 +146,24 @@ document.addEventListener("DOMContentLoaded", function () {
             const selectedFilter =
                 button.dataset.filter.toLowerCase();
 
+
+            // Remove active state from all filters
+
             filterButtons.forEach(filterButton => {
 
                 filterButton.classList.remove("active");
 
             });
 
+
+            // Activate selected filter
+
             button.classList.add("active");
 
 
-            // Show or hide all current project cards
+            // ==========================================
+            // SHOW / HIDE PROJECT CARDS
+            // ==========================================
 
             getAllCards().forEach(card => {
 
@@ -154,9 +172,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     .split(",")
                     .map(tool => tool.trim());
 
+
                 const matches =
                     selectedFilter === "all" ||
                     projectTools.includes(selectedFilter);
+
 
                 card.style.display =
                     matches ? "grid" : "none";
@@ -164,9 +184,17 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
 
-            // Return to the first matching project
+            // ==========================================
+            // RETURN TO FIRST MATCHING PROJECT
+            // ==========================================
 
             currentIndex = 0;
+
+
+            /*
+            Wait for browser layout to update
+            before calculating project position.
+            */
 
             requestAnimationFrame(function () {
 
