@@ -793,17 +793,13 @@ header.scrolled nav{
 ========================================== */
 
 .project-card {
-
     flex: 0 0 100%;
-
     min-width: 100%;
 
     display: grid;
 
-    /* More space for project information */
-    grid-template-columns: 58% 42%;
-
-    gap: 40px;
+    grid-template-columns: 55% 45%;
+    gap: 36px;
 
     background: rgba(255, 255, 255, 0.94);
 
@@ -829,15 +825,6 @@ header.scrolled nav{
 }
 
 
-.project-card:hover {
-
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 25px 60px rgba(25, 55, 95, 0.10),
-        0 15px 35px rgba(236, 72, 153, 0.13);
-
-}
 /* ==========================================
    PROJECT CONTENT
 ========================================== */
@@ -887,15 +874,13 @@ header.scrolled nav{
 .project-image img {
     width: 100%;
 
-    height: 430px;
+    height: 560px;
 
     object-fit: cover;
 
     object-position: top;
 
     display: block;
-
-    border-radius: 18px;
 }
 
 /* ==========================================
