@@ -933,28 +933,27 @@ header.scrolled nav{
 
 
 /* ==========================================
-   PROJECT DETAILS
+   PROJECT DIFFICULTY DETAILS
 ========================================== */
 
 .project-details {
-
     display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 20px;
-
-    margin-bottom: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
 }
 
 
+/* Rating Card */
+
 .project-details div {
+    background: #fafafa;
+    padding: 14px 10px;
+    border-radius: 12px;
 
-    background: rgba(250, 250, 250, 0.85);
-
-    padding: 18px;
-
-    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     text-align: center;
 
@@ -962,22 +961,50 @@ header.scrolled nav{
 }
 
 
+/* Rating Title */
+
 .project-details strong {
+    display: flex;
 
-    display: block;
+    align-items: center;
+    justify-content: center;
 
-    margin-bottom: 8px;
+    /* IMPORTANT:
+       Same title height = same star position */
+    min-height: 54px;
 
-    color: var(--primary);
+    width: 100%;
+
+    font-size: .75rem;
+    line-height: 1.4;
+
+    color: #888;
+
+    margin: 0;
+
+    text-transform: uppercase;
+    letter-spacing: .5px;
+
+    text-align: center;
 }
 
+
+/* Stars */
 
 .project-details p {
+    margin: 10px 0 0;
 
-    font-size: 1.2rem;
+    font-size: .95rem;
+    line-height: 1;
+
+    font-weight: 600;
+
+    color: var(--primary);
+
+    white-space: nowrap;
+
+    text-align: center;
 }
-
-
 /* ==========================================
    PROJECT BUTTON
 ========================================== */
@@ -1818,20 +1845,15 @@ footer {
 
     }
 
-    .project-details{
+   .project-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+   }
 
-        display:flex;
-        flex-wrap:wrap;
-        gap:12px;
-
-    }
-
-    .project-details div{
-
-        flex:1;
-        min-width:120px;
-
-    }
+   .project-details div {
+    min-width: 0;
+   }
 
     .project-footer{
 
