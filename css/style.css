@@ -499,6 +499,11 @@ header.scrolled nav{
 
 }
 
+/* Projects uses a tighter header flow */
+#projects .section-description{
+    margin-bottom:25px;
+}
+
 .strength-grid{
 
     display:grid;
@@ -752,9 +757,46 @@ header.scrolled nav{
 
     width: min(96%, 1600px);
 
+    margin: 0 auto;
+
     position: relative;
 
     z-index: 1;
+}
+
+/* Keep the Projects heading area centered and compact */
+#projects .section-title{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+#projects .projects-subtitle{
+    max-width:850px;
+    margin:0 auto;
+    text-align:center;
+    line-height:1.7;
+}
+
+/* Project Complexity & Personal Difficulty intro */
+.project-difficulty-intro{
+    max-width:900px;
+    margin:25px auto 35px;
+    padding:0 20px;
+    text-align:center;
+}
+
+.project-difficulty-intro h3{
+    margin:0 0 6px;
+    font-size:1.15rem;
+    line-height:1.4;
+    color:var(--primary);
+}
+
+.project-difficulty-intro p{
+    margin:0;
+    font-size:.98rem;
+    line-height:1.6;
+    color:var(--text-light);
 }
 
 
@@ -766,7 +808,7 @@ header.scrolled nav{
 
     width: 100%;
 
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 
@@ -1547,7 +1589,9 @@ footer {
 
     gap:14px;
 
-    margin:45px 0 60px;
+    width:100%;
+
+    margin:0 auto 40px;
 
 }
 
@@ -1662,10 +1706,33 @@ footer {
 
     .project-details{
 
-        gap:40px;
+        gap:14px;
 
     }
 
+}
+
+
+/* Projects header spacing on tablets */
+@media (max-width:900px){
+
+    #projects .section-description{
+        margin-bottom:22px;
+    }
+
+    .project-difficulty-intro{
+        margin:22px auto 30px;
+        padding:0 16px;
+    }
+
+    .project-filters{
+        gap:10px;
+        margin-bottom:35px;
+    }
+
+    .projects-carousel{
+        margin-top:35px;
+    }
 }
 
 
@@ -1674,6 +1741,43 @@ footer {
 ========================================== */
 
 @media (max-width:600px){
+
+    #projects .section-title{
+        margin-bottom:15px;
+    }
+
+    #projects .section-description{
+        margin-bottom:20px;
+        font-size:.95rem;
+        line-height:1.6;
+    }
+
+    .project-difficulty-intro{
+        margin:20px auto 28px;
+        padding:0 10px;
+    }
+
+    .project-difficulty-intro h3{
+        font-size:1rem;
+    }
+
+    .project-difficulty-intro p{
+        font-size:.88rem;
+    }
+
+    .project-filters{
+        gap:8px;
+        margin-bottom:30px;
+    }
+
+    .filter-btn{
+        padding:9px 16px;
+        font-size:.82rem;
+    }
+
+    .projects-carousel{
+        margin-top:30px;
+    }
 
     /* ================= Navigation ================= */
 
